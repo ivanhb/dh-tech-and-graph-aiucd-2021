@@ -1,0 +1,565 @@
+body{
+    margin: 0px auto;
+    font-family: "Gill Sans", sans-serif;
+}
+
+header{
+  height: 50px;
+  background-color: #204051;
+}
+header div{
+  width:fit-content;
+  display: inline-block;
+  font-size: large;
+  color: lightgray;
+  margin-right: 30px;
+  padding: 10px;
+}
+header .help{
+  float:right;
+}
+header .help:hover{
+  cursor: pointer;
+  color: white;
+  border-bottom: solid 2pt white;
+}
+header .git{
+  float:right;
+}
+header .git:hover{
+  cursor: pointer;
+  color: white;
+  border-bottom: solid 2pt white;
+}
+
+header .git a{
+  color: lightgray;
+}
+
+footer{
+  padding-top: 40px;
+  height: fit-content;
+  margin-top: 40px;
+  background-color: #204051;
+  text-align: center;
+}
+footer .contacts-title{
+  width: 80%;
+  margin: 0 auto;
+  color: lightgray;
+  font-size: 30pt;
+}
+footer .separator{
+  height: 1px;
+  background-color: lightgray;
+  width: 95%;
+  margin: 0 auto;
+}
+footer .other{
+  height: fit-content;
+  margin: 0 auto;
+  width: 95%;
+  color: lightgray;
+  font-size: 12pt;
+}
+footer .acdh-footer{
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+  opacity: 0.8;
+}
+footer .contacts-title i{
+  font-size: 17pt;
+}
+footer .footer-content{
+  width: 80%;
+  table-layout: fixed ;
+  margin: 0 auto;
+  color: lightgray;
+}
+
+footer .footer-content .contacts-container .a-contact{
+  word-wrap: break-word;
+  padding: 50px;
+}
+footer .footer-content .contacts-container .a-contact div{
+  opacity: 0.8;
+}
+footer a{
+  color: lightgray;
+  text-decoration: underline;
+}
+footer a:hover{
+  color: white;
+}
+footer .footer-content .contacts-container .a-contact .name{
+  opacity: 1;
+  font-size: 16pt;
+  opacity: initial;
+}
+
+#top{
+    padding-left: 20%;
+    height: fit-content;
+    width: 100%;
+    background-color: #f1f3f4;
+    height: fit-content;
+    min-height: 250px;
+    max-height: 300px;
+    border-bottom: solid 1px #204051;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+.a-logo{
+  display: inline-block;
+  margin: 0 auto;
+  width: 170px;
+  padding-bottom: 20px;
+}
+
+#top .inputbox-container{
+    display: inline-block;
+    padding-top: 0px;
+    width: 50%;
+    margin-left: 20px;
+}
+#top .inputbox-container #main_input{
+    width: 100%;
+    display: inline-block;
+    font-size: 15pt;
+    border: solid gray 2pt;
+    border-radius: 10px;
+    padding: 10px;
+}
+#top #add_btn{
+  display: inline-block;
+  font-size: 15pt;
+  padding: 10px;
+  margin-top: -10px;
+}
+#boxes_container{
+  position:absolute;
+  width: 50%;
+  padding-top: 15px;
+  z-index: 1;
+}
+#boxes_container .a-box{
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  border: solid gray 1px;
+  display: inline-block;
+  color: white;
+}
+#boxes_container .a-box .del-btn{
+  display: inline-block;
+  margin-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  opacity: 0.9;
+}
+#boxes_container .a-box .del-btn:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+#boxes_container .a-box + .a-box{
+  margin-left: 10px;
+}
+
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete-items{
+  position: absolute;
+  width: 40%;
+  border-top: none;
+  z-index: 99;
+  color: gray;
+  font-size: 13pt;
+  max-height: 300px;
+  overflow:auto;
+  border-right: solid 2pt lightgray;
+  border-left: solid 2pt lightgray;
+  border-bottom: solid 10pt rgba(212,212,212,1);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.autocomplete-items div {
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #F6F6F6;
+  color: #178dd4;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #178dd4 !important;
+  color: #ffffff;
+}
+
+.info-section{
+  position: fixed;
+  top: 10%;
+  right: 0;
+  height: 600px;
+  width: 400px;
+  background-color: lightgray;
+  border-radius: 20px 0px 0px 20px;
+  border: solid darkgrey;
+  z-index: 10;
+}
+.info-section .title{
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 17pt;
+  word-wrap: break-word;
+}
+
+.info-section .courses-header{
+  margin: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 15pt;
+  border-bottom: solid gray;
+}
+.info-section .courses{
+  padding: 15px;
+  padding-top: 0px;
+  margin-top: 0%;
+  font-size: 11pt;
+  height: 22%;
+  overflow:auto;
+  word-wrap: break-word;
+}
+
+.info-section .a-course {
+  border-bottom: dotted 1pt gray;
+  font-size: 11pt;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.info-section .a-course .c-title{
+  font-size: 12pt!important;
+  padding-right: 100px;
+}
+.info-section .a-course .c-language{
+  padding: 5px;
+  padding-bottom: 1px;
+}
+.info-section .a-course .c-department{
+  padding: 5px;
+  padding-bottom: 1px;
+}
+.info-section .a-course .c-techniques{
+  padding: 5px;
+  padding-bottom: 1px;
+}
+.info-section .a-course .c-techniques .tech{
+  display: inline-block;
+  padding: 5px;
+  background-color: #447ab2;
+  border-radius: 5px;
+  margin: 5px;
+  color: white;
+  opacity: 0.8;
+}
+.info-section .a-course .c-techniques .tech:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+.info-section .a-course .c-infourl{
+  padding: 10px;
+  font-size: 12pt;
+  padding-bottom: 1px;
+}
+.info-section .a-course .pre{
+  color: gray;
+}
+.info-section .a-course .c-active{
+  float: right;
+  padding: 10px;
+  margin-right: 25px;
+  border-radius: 20px 20px 20px 20px;
+  border: solid 1pt;
+}
+.info-section .a-course .c-active.active{
+  background-color: lightgreen;
+}
+
+.info-section .dois-header{
+  margin: 15px;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 15pt;
+  border-bottom: solid gray;
+}
+.info-section .dois{
+  padding-left: 25px;
+  padding-top: 0px;
+  font-size: 11pt;
+  max-height: 30%;
+  overflow:auto;
+  word-wrap: break-word;
+}
+.info-section .dois .d-year{
+  margin-top: 20px;
+  font-size: 13pt;
+}
+.info-section .dois .d-title{
+ margin-top: 12px;
+ padding-left: 10px;
+ padding-right: 20px;
+ border-left: gray solid;
+}
+.info-section .dois .d-title a{
+  display: block;
+}
+.info-section .large{
+  height: 55%;
+  max-height: 55%;
+}
+.info-section .title .pre{
+  color: gray;
+  font-size: 15pt;
+  display: block;
+}
+.info-section .title .divider{
+  color: gray;
+  font-size: 14pt;
+}
+.info-section .no-res{
+  color: gray;
+}
+
+.info-section .del-btn{
+  font-size: 15pt;
+  float: left;
+  padding: 6px;
+  color: white;
+  background-color: #447ab2;
+  border-radius: 17px 0px 5px 0px;
+  opacity: 0.6;
+  border-right: solid 2pt gray;
+  border-bottom: solid 2pt gray;
+}
+.info-section .del-btn:hover{
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Q1 */
+#q_containers{
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: 0 auto;
+}
+#q1_container {
+  margin-top: 30px;
+  width: 600px;
+  min-height: 900px;
+  display: inline-block;
+}
+#q1 {
+  background-color: #f5fcfb;
+  border-radius: 0px 0px 0px 0px;
+  border-top: solid 18pt #1ABC9C;
+  border: 1pt dotted gray;
+  border-top: none;
+}
+#q2_container {
+  display: inline-block;
+  width: calc(100% - 630px);
+  min-height: 500px;
+  margin-top: 30px;
+  margin-left: 20px;
+  vertical-align: top;
+}
+#q2 {
+  margin-top: 0px;
+  border-radius: 0px 0px 0px 0px;
+  background-color: #fbf8fc;
+  border: 1pt dotted gray;
+  border-top: none;
+}
+.q-part{
+  font-size: 18pt;
+  margin-left: 0px;
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 20px;
+}
+#q1_info{
+  background-color: #1ABC9C;
+  color: white;
+  border-radius: 50px 50px 0px 0px;
+}
+#q2_info{
+  background-color: #9B59B6;
+  color: white;
+  border-radius: 50px 50px 0px 0px;
+  vertical-align: bottom;
+  margin-top: 10px;
+}
+
+/* Q2 */
+#cy {
+  border-radius: 0px 0px 0px 0px;
+  width: 100%;
+  height: 500px;
+  z-index: 10;
+  background-color: #fbf8fc;;
+}
+#diagram_fit{
+  margin-left: 10px;
+  position:absolute;
+  font-size: 16pt;
+  z-index: 20;
+}
+#fit_btn:hover{
+  cursor: pointer;
+}
+
+
+
+/* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    /*cursor:pointer;*/
+    display:none;
+    height:100%;
+    position:fixed;
+    /* text-align:center; */
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .a-logo{
+  width: 120px;
+}
+.hover_bkgr_fricc .popup-block {
+    cursor: default;
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    min-height: 300px;
+    position: relative;
+    border-radius: 8px;
+    padding: 10px;
+    width: 67%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+.modal-header{
+  text-align: center;
+  background-color: #f1f3f4;
+  border-bottom: solid gray 2pt;
+
+}
+.modal-header .content{
+  display: inline-block;
+  vertical-align: bottom;
+  width: 60%;
+}
+.modal-header .content p{
+  width: 100%;
+}
+.modal-header .content .a-title{
+  font-size: 25pt;
+}
+
+.modal-body{
+  width: 100%;
+  height: calc(100% - 200px);
+  overflow:auto;
+}
+.hover_bkgr_fricc .instructions{
+  width: 100%;
+  table-layout: fixed ;
+}
+
+.hover_bkgr_fricc .instructions td{
+ padding: 5px;
+}
+
+.hover_bkgr_fricc .instructions img{
+}
+.hover_bkgr_fricc .instructions .description{
+  padding: 20px;
+  font-size: 14pt
+}
+
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 5px;
+    cursor: pointer;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+
+/* Popup box BEGIN */
+
+
+
+/*When the window gets smaller*/
+@media only screen and (max-width: 1400px) {
+   #q1_container {
+     display: block;
+     width: 600px;
+     margin: 0 auto;
+     margin-top: 20px;
+   }
+   #q2_container {
+     display: block;
+     width: 100%;
+     margin: 0 auto;
+     margin-top: 20px;
+   }
+}
+@media only screen and (max-width: 720px) {
+  #top .inputbox-container{
+    width: 90%;
+  }
+  #top .inputbox-container #main_input{
+    font-size: 13pt;
+    width: 80%;
+  }
+  #boxes_container{
+    width: 90%;
+  }
+  #boxes_container .a-box + .a-box{
+    display: block;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+
+}

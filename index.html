@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Site Properties -->
+  <title>ACDH-2020</title>
+  <link rel="stylesheet" href="static/css/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/index.css">
+
+</head>
+<body>
+
+  <header>
+      <div class="git"><i class="fa fa-github fa-1x" aria-hidden="true"></i>&nbsp;Visit the GitHub repository</div>
+      <div class="help trigger_popup_fricc">Help</div>
+  </header>
+
+  <div id="top">
+      <img class="a-logo" src="logo.png" alt="logo">
+      <div id="main_input_container" class="inputbox-container">
+          <span><input id="main_input" type="text" name="institution" placeholder="Search for an institution"></span>
+          <div id="boxes_container"></div>
+      </div>
+      <button id="add_btn" type="button" class="btn btn-primary">Add it</button>
+  </div>
+
+  <div class="hover_bkgr_fricc">
+
+          <div class="popup-block">
+              <div class="popupCloseButton">&times;</div>
+              <div class="modal-header">
+                <span><img class="a-logo" src="logo.png" alt="logo"></span>
+                <span class="content">
+                  <p class="a-title">Introduction to the interface and usage instructions</p>
+                  <p><a class="a-git-link"><i class="fa fa-github fa-1x" aria-hidden="true"></i>&nbsp;Visit the GitHub repository</a></p>
+                </span>
+
+              </div>
+
+
+              <div class="modal-body">
+                <table class="instructions">
+
+                  <tr>
+                    <td class="description">
+                      <p>The aim of this visualisation is to investigate the techniques taught by the different DH courses and the collaborations in terms of academic publications between institutions within the field of Digital Humanities. This guide mentions only the main characteristics of the developed interface along with the permitted operations. For any further information, please read our <a class="a-documentation-link">full documentation</a>.</p>
+                    </td>
+                    <td><img src="img/0.png" width="100%"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="description">
+                      <p>The visualisation is divided in two main views: (a) a <span class="barchart-style">bar chart</span>, and (b) a <span class="netgraph-style">network graph</span>. When starting the visualisation both the views include all the institutions and their available data. The search bar lets you look for a specific institution. By clicking on "add it" the graph network will update and display only the selected Institution and its adjacent nodes. At the same time, the bar chart will highlight the techniques taught/adopted by the selected institution using the same color of the institution. This visualisation allows to add up to 2 institutions. If two institutions share the same technique then a "both" color will appear as well and on and the bar chart will update accordingly  and highlight the shared techniques.</p>
+                    </td>
+                    <td><img src="img/1.png" width="100%"><img src="img/2.png" width="100%"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="description">
+                      <p>The bar chart shows for every tadirah technique (from the original DH Registry Dataset) the number of articles written in DH Journals written by institutions teaching/adopting such techniques. By clicking on a specific technique, an information window will pop up with all the articles related to that technique.</p>
+                    </td>
+                    <td><img src="img/3.png" width="100%"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="description">
+                      <p>The network graph represents the collaboration between the institutions The default view contains all the institutions, you can have a focus on specific subnetworks by searching for the interested institutions into the search bar. Clicking on an institution (a graph node) a pop-up information panel will appear and display the institution information, which includes the list of its provided DH courses, along with the written articles.</p>
+                    </td>
+                    <td><img src="img/4.png" width="100%"></td>
+                  </tr>
+
+                  <tr>
+                    <td class="description">
+                      <p>When clicking on an arch between two institutions (nodes) the information tab will display the publications co-authored by people affiliated to both institutions.</p>
+                    </td>
+                    <td><img src="img/5.png" width="100%"></td>
+                  </tr>
+                </table>
+          </div>
+      </div>
+  </div>
+
+  <div id="filters">
+  </div>
+
+  <div id="q_containers">
+    <div id="q1_container">
+      <div id="q1_info" class="q-part">
+          Which are the techniques most often adopted in DH published research?
+      </div>
+      <div id="q1">
+      </div>
+    </div>
+
+    <div id="q2_container">
+      <div id="q2_info" class="q-part">
+            How many Digital Humanities articles are affiliated to the institutions of the registry? Are there any collaborations, i.e. co-authored DH articles, between the institutions?
+      </div>
+      <div id="q2">
+          <div id="cy"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contacts-title"><i class="fa fa-circle" aria-hidden="true"></i>  Contacts  <i class="fa fa-circle" aria-hidden="true"></i></div>
+    <table class="footer-content">
+      <tr class="contacts-container">
+        <td class="a-contact">
+          <div class="name"><i class="fa fa-user" aria-hidden="true"></i> Francesca Giovannetti</div>
+          <div class="position">Ph.D. Student</div>
+          <div class="place">University of Bologna, Bologna (Italy)</div>
+          <div class="dep"><a href="https://ficlit.unibo.it/it">Department of Classical Philology and Italian Studies (FICLIT)</a></div>
+          <div class="email"><span>Email: </span><span><a href="mailto:francesc.giovannett6@unibo.it" target="_top">francesc.giovannett6@unibo.it</a></span></div>
+        </td>
+        <td class="a-contact">
+          <div class="name"><i class="fa fa-user" aria-hidden="true"></i> Ivan Heibi</div>
+          <div class="position">Ph.D. Student</div>
+          <div class="place">University of Bologna, Bologna (Italy)</div>
+          <div class="dep"><a href="https://ficlit.unibo.it/it">Department of Classical Philology and Italian Studies (FICLIT)</a></div>
+          <div class="email"><span>Email: </span><span><a href="mailto:ivan.heibi2@unibo.it" target="_top">ivan.heibi2@unibo.it</a></span></div>
+        </td>
+        <td class="a-contact">
+          <div class="name"><i class="fa fa-user" aria-hidden="true"></i> Bruno Sartini</div>
+          <div class="position">Ph.D. Student</div>
+          <div class="place">University of Bologna, Bologna (Italy)</div>
+          <div class="dep"><a href="https://ficlit.unibo.it/it">Department of Classical Philology and Italian Studies (FICLIT)</a></div>
+          <div class="email"><span>Email: </span><span><a href="mailto:bruno.sartini3@unibo.it" target="_top">bruno.sartini3@unibo.it</a></span></div>
+        </td>
+      </tr>
+    </table>
+    <div class="separator"></div>    
+  </footer>
+
+  <!-- Cytoscape -->
+  <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+  <!-- for testing with local version of cytoscape.js -->
+	<!--<script src="static/cytoscape/cytoscape.min.js"></script>-->
+  <script src="https://unpkg.com/webcola/WebCola/cola.min.js"></script>
+  <script src="static/cytoscape/dist/cytoscape-cola.js"></script>
+  <!-- Plotly -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- Jquery -->
+  <script src="static/js/jquery.min.js"></script>
+  <!-- Cytoscape -->
+  <script src="static/js/layout.js"></script>
+
+  <script>
+    //******************************************//
+    //********** The main Interface **************//
+    //******************************************//
+    var ACDH_DATA_PATH = "https://ivanhb.github.io/data/src/acdh2020/";
+    var GIT_URL = "https://github.com/br0ast/ACDH-2020";
+    var DOC_LINK = "https://github.com/br0ast/ACDH-2020/blob/master/doc/documentation.md";
+
+    $("header .git").on( "click", function () {window.location.href = GIT_URL;});
+    $(".a-git-link").attr("href", GIT_URL);
+    $(".a-documentation-link").attr("href", DOC_LINK);
+
+    var layout = new Layout("main_input", ACDH_DATA_PATH);
+    layout.init_interface();
+
+    //******************************************//
+    //********** POP Up Help **************//
+    //******************************************//
+    $(".trigger_popup_fricc").click(function(){ $('.hover_bkgr_fricc').show();});
+    /* $('.hover_bkgr_fricc').click(function(){$('.hover_bkgr_fricc').hide();}); */
+    $('.popupCloseButton').click(function(){$('.hover_bkgr_fricc').hide();});
+    $('.hover_bkgr_fricc').show();
+
+  </script>
+
+</body>
+</html>

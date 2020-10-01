@@ -1,0 +1,54 @@
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#myModal').modal('show');
+    });
+</script>
+<body>
+    <div id="myModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Instructions</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>The interface: On the top <img src="placeholder.png" class="img-fluid" alt="Responsive image">
+                a search bar that lets you look
+                 for a specific institution.
+                By clicking "add it" the Dynamic network (right side, or second graph below in mobile) will update only displaying the selected Institution
+                and its adiacent nodes. At the same time, the bar chart on the left (or the first graph in mobile) will highlight the techniques
+                taught by that institution using the same color of the institution.
+                At the moment you can add up to 2 institutions with the Add it button. If two institutions share the same
+                technique then a "both" color will appear as well and on the left graph the shared techniques will be
+                highlighted with that color.</p>
+                <p>On the left (or first graph in mobile): <img src="placeholder.png" class="img-fluid" alt="Responsive image">
+                    A bar chart that shows for every tadirah technique (from the original DH Registry Dataset)
+                    The number of articles written in DH Journals. By clicking on that technique, a new window will pop
+                    up with all the articles related to that technique. When selecting an institution, the techniques taught by its courses
+                    will be highlighted. <img src="placeholder.png" class="img-fluid" alt="Responsive image"> The plotly library allows the user to select portion of the graph,
+                    in order to return to the normal state a double click is needed.</p>
+                <p>On the Right (or second graph below in mobile):<img src="placeholder.png" class="img-fluid" alt="Responsive image">
+                    A dynamic network of publications of the institutions contained in the original dataset. The default one contains
+                    all the institutions, but some subnetworks can be extracted by selecting institutions with the search bar above.
+                    Clicking on an institution node opens a tab with all the detected publications of that institution along with
+                    its DH Courses. <img src="placeholder.png" class="img-fluid" alt="Responsive image"> Clicking on an arch between two institutions will open a tab that shows the publications co-authored
+                    by people affiliated to both institutions. <img src="placeholder.png" class="img-fluid" alt="Responsive image"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+        Instructions
+      </button>
+</body>
